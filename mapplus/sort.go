@@ -4,7 +4,7 @@ import (
 	"sort"
 )
 
-type Sort[K comparable, V comparable] struct {
+type Sort[K comparable, V any] struct {
 	i int
 	m map[K]V
 	s map[int]K

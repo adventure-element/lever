@@ -1,6 +1,6 @@
 package mapplus
 
-func ToSlice[K comparable, V comparable](m map[K]V) []V {
+func ToSlice[K comparable, V any](m map[K]V) []V {
 	var s = make([]V, 0, len(m))
 	for _, v := range m {
 		s = append(s, v)
@@ -8,7 +8,7 @@ func ToSlice[K comparable, V comparable](m map[K]V) []V {
 	return s
 }
 
-func KeyToSlice[K comparable, V comparable](m map[K]V) []K {
+func KeyToSlice[K comparable, V any](m map[K]V) []K {
 	var s = make([]K, 0, len(m))
 	for k := range m {
 		s = append(s, k)
